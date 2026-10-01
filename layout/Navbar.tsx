@@ -1,0 +1,46 @@
+import Link from "next/link";
+import { Menu } from "@/components/Menu";
+import SearchBar from "@/components/SearchBar";
+import NavIcons from "@/components/NavIcons";
+import Image from "next/image";
+export const Navbar = () => {
+  return (
+    <div className="h-20 px-4 md:px-8 lg:px-16 2xl:px-64 relative ">
+      <div className="h-full flex items-center justify-between">
+        {/* Mobile */}
+        <div className="flex items-center justify-between w-full md:hidden">
+          <Link href="/">
+            <div className="text-2xl tracking-wide">Rimal</div>
+          </Link>
+          <Menu />
+        </div>
+
+        {/* Bigger Screen */}
+        <div className="hidden md:flex items-center justify-between gap-8 h-full w-full">
+          {/* Left */}
+          <div className="w-1/3">
+            
+            <Link href="/" className="flex items-center gap-3">
+              <Image src="icons/shopping-card.svg"  alt="" height={24} width={24}/>
+              <div className="text-2xl tracking-wide">Rimal</div>
+            </Link>
+
+            <div className="hidden xl:flex gap-4">
+              <Link href="/">Homepage</Link>
+              <Link href="/">Shop</Link>
+              <Link href="/">Deals</Link>
+              <Link href="/">About</Link>
+              <Link href="/">contact</Link>
+            </div>
+          </div>
+
+          {/* Right */}
+          <div className="w-2/3 flex items-center justify-between gap-8">
+            <SearchBar />
+            <NavIcons />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
