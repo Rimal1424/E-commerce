@@ -1,9 +1,10 @@
 import Image from "next/image";
-
-export default function Home() {
+import Slider from "@/components/Slider";
+export default function HomePage() {
   return (
     <div className="">
-      hello world
+      <Slider/>
     </div>
   );
 }
+ 
