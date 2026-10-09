@@ -19,9 +19,13 @@ export const Navbar = () => {
         <div className="hidden md:flex items-center justify-between gap-8 h-full w-full">
           {/* Left */}
           <div className="w-1/3 xl:w-1/2 flex items-center gap-12">
-            
             <Link href="/" className="flex items-center gap-3">
-              <Image src="icons/shopping-card.svg"  alt="" height={24} width={24}/>
+              <Image
+                src="icons/shopping-card.svg"
+                alt=""
+                height={24}
+                width={24}
+              />
               <div className="text-2xl tracking-wide">LAMA</div>
             </Link>
 
@@ -32,8 +36,6 @@ export const Navbar = () => {
               <Link href="/">About</Link>
               <Link href="/">contact</Link>
             </div>
-
-            
           </div>
 
           {/* Right */}
